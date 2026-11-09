@@ -5,4 +5,3 @@ def greet(name=WHO_TO_GREET):
     print("This program is running inside GitHub Actions.")
 
 greet()
-greet("Gaige")
