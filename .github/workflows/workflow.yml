@@ -1,17 +1,19 @@
+# The below line is the name of the workflow
 name: Greeting with Python
 
-on:
+on: # Upon the action of pushing to the main branch or manually triggering the workflow, the workflow will run
   push:
     branches:
       - main
-  workflow_dispatch: 
+  workflow_dispatch: # Manual trigger
 
-jobs:
+jobs: # The jobs of the workflow
   hello-python:
+    # The name of the job, and what runner it will use
     name: Run the Python Greeting program
     runs-on: ubuntu-latest
 
-    steps:
+    steps: # The workflow will check out the repo for the latest updates, then run the program using python
       - name: Check out the repository
         uses: actions/checkout@v4
 
